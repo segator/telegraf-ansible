@@ -66,6 +66,8 @@
   debug = {{ telegraf_debug }}
   ## Run telegraf in quiet mode
   quiet = {{ telegraf_quiet }}
+  logtarget = "file"
+  logfile = "/var/log/telegraf/telegraf.log"
 
   # Override default hostname, if empty use os.Hostname()
 {% if telegraf_hostname is defined and telegraf_hostname != None %}
